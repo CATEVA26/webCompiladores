@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Compiladores</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .w3-sidebar {
+      z-index: 3;
+      width: 250px;
+      top: 43px;
+      bottom: 0;
+      height: inherit;
+    }
+
+    .w3-container p {
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Compiladores</a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+      class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <h4 class="w3-bar-item"><b>Menu</b></h4>
+    <a class="w3-bar-item w3-button w3-hover-white" href="index.html">
+      <img src="home.png" alt="home" width="50" height="50">
+    </a>
+  </nav>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+  <div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">¿Qué hace un compilador?</h1>
+        <p>Un compilador es como un traductor. El compilador se encarga de tranformar un programa escrito en un
+          lenguaje en otro formato o lenguaje.
+        </p>
+        <p>De forma general el compilador se encarga de traducir un codigo en lenguaje de alto nivel al lenguaje de
+          maquina.
+        </p>
+        <p>Además existen varios tipos de compiladores:</p>
+        <ul>
+          <li>Compiladores de varias pasadas</li>
+          <li>Compiladores de una pasada</li>
+          <li>Optimizadores</li>
+          <li>Compiladores JIT(Just In Time)</li>
+        </ul>
+      </div>
+      <div class="w3-third w3-container">
+        <!--<p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>-->
+        <div class="w3-border w3-padding-large w3-padding-64 w3-center">
+          <img src="FCompilador.png" alt="" width="300" height="150">
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Partes de un compilador</h1>
+        <ul class="lista-partes">
+          <li>
+            <h4>Analizador Léxico</h4>
+            <p>Trabaja a petición del analizador sintactico, se encarga de reconcer identifiadores, palabras clave y
+              constantes, agrupando estas expresiones en "fichas" o tokens. </p>
+          </li>
+          <li>
+            <h4>Analizador Sintáctico</h4>
+            <p>Esta fase inicia si el analizador léxico no detecto errores, el analizador lexico se encarga de
+              construir frases verificando que el lenguaje cumpla con las especificaciones que necesita el compilador.
+            </p>
+          </li>
+          <li>
+            <h4>Analizador Semántico</h4>
+            <p>Se encarga de determinar si los componentes se usan correctamente de acuerdo al contexto en donde
+              aparecen, es decir
+              se trata de una etapa de verificación que da paso a la generación de código.
+            </p>
+          </li>
+          <li>
+            <h4>Generador De Código Intermedio</h4>
+            <p>Se encarga de recibir un arbol de sintaxis anodado, apartir del cual se crea una representacion lineal.
+              El código intermedio es independiente de la maquina y aprovecha todo el almacenamiento de la maquina para
+              generar el codigo.
+            </p>
+          </li>
+          <li>
+            <h4>Optimizacion De Código</h4>
+            <p>Es un proceso que se encarga de la transformación de un fragmento de código en otro trozo con una
+              funcionalidad
+              equivalente buscando mejorar caracteristicas como la velocidad y el tamaño del código.
+            </p>
+          </li>
+          <li>
+            <h4>Generador de Código</h4>
+            <p>Es la última etapa cuyo proposito es traducir el código de alto nivel en uno de bajo nivel o viceversa.
+              Los compiladores tambien pueden funcionar como traductores y generar código en otros lenguajes a partir
+              de uno diferente.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="w3-third w3-container">
+        <div class="w3-border w3-padding-large w3-padding-64 w3-center">
+          <br><br><br><br><br>
+          <img src="partes.png" alt="" width="350" height="400">
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Analizador Léxico a detalle</h1>
+        <p>La fase de análisis léxico en un compilador, convierte un flujo de caracteres en un flujo de tokens.
+          En esta fase tambien se descarta espacios en blanco y comentarios en el código.
+        </p>
+        <p>
+          Para esta fase el analizador lexico utiliza una conjunto de herramientas y reglas que permiten identificar los
+          tokens
+          de mejor manera. Por ejemplo el uso de las expresiones regulares permite identificar tokens como numeros
+          enteros
+          y cadenas de caracteres. Mientras que las reglas son expresiones que definen los distintos tipos de tokens.
+          En resumen el analizador lexico se encarga de indenticar tokens y errores lexicos dentro de un codigo
+          y actua cuando el analizador sintactico lo necesite.
+        </p>
+
+      </div>
+      
+
+      <div class="w3-third w3-container">
+        <div class="w3-border w3-padding-large w3-padding-64 w3-center">
+          <img src="lexer.png" alt="" width="300" height="350">
+        </div>
+      </div>
+      <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Analizador Sintáctico (Parser)</h1>
+          <p>
+            El analizador sintáctico es una de las fases principales de un compilador. Su función es analizar la
+            estructura gramatical de un programa fuente y verificar
+            que ésta cumpla con las reglas de la gramática del lenguaje de programación en cuestión. Durante este
+            proceso, el analizador sintáctico toma como entrada el
+            programa fuente en forma de tokens generados por el analizador léxico y los agrupa en estructuras
+            sintácticas más complejas, siguiendo la estructura de la gramática del lenguaje.
+            Si el programa fuente contiene errores sintácticos, el analizador sintáctico los detectará y emitirá un
+            mensaje de error indicando la ubicación y la naturaleza del problema.
+            En caso contrario, el analizador sintáctico generará un árbol de sintaxis abstracta o AST,
+            que será utilizado por las fases posteriores del compilador para generar el código objeto correspondiente.
+          </p>
+
+          <!--
+<script src="ast.js"></script>
+          <label for="myText">Coloca una expresión matemática: </label>
+          <input type="text" id="myText" name="myText"><br><br>
+          <button onclick="crearAST()">Ingresar</button>
+
+          <p id="displayText"></p>
+         -->
+        </div>
+        <div class="w3-third w3-container">
+          <div class="w3-border w3-padding-large w3-padding-64 w3-center">
+            <img src="AST.svg.png" alt="" width="300" height="350">
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Pagination -->
+
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Hecho por: Stefano Landázuri</h4>
+        </div>
+
+
+      </footer>
+
+      <!-- END MAIN -->
+    </div>
+
+    <script>
+      // Get the Sidebar
+      var mySidebar = document.getElementById("mySidebar");
+
+      // Get the DIV with overlay effect
+      var overlayBg = document.getElementById("myOverlay");
+
+      // Toggle between showing and hiding the sidebar, and add overlay effect
+      function w3_open() {
+        if (mySidebar.style.display === 'block') {
+          mySidebar.style.display = 'none';
+          overlayBg.style.display = "none";
+        } else {
+          mySidebar.style.display = 'block';
+          overlayBg.style.display = "block";
+        }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+        mySidebar.style.display = "none";
+        overlayBg.style.display = "none";
+      }
+    </script>
+
+</body>
+
+</html>
